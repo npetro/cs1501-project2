@@ -1,0 +1,53 @@
+========================================
+CS/COE 1501 Assignment Information Sheet
+----------------------------------------
+
+You must submit an information sheet with every assignment.  Also be sure
+to submit all materials following the procedures described on the
+submission procedures page.
+
+Name: Nick Petro 
+
+Lecture section: MW 4:30 - 5:45 pm 
+
+Recitation day and time: F 4:00 pm 
+
+Assignment #: 2 
+
+Program due date: Friday, October 14, 2016 
+
+Handed in date: Friday, October 14, 2016
+
+Source code file name(s):
+
+MyLZW.java
+results.txt
+
+Other file name(s) (if relevant):
+
+BinaryStdIn.java
+BinaryStdOut.java 
+TST.java 
+Queue.java
+StdIn.java
+StdOut.java
+
+Does your program run without error?: Yes
+
+If not, what is/are the error(s) and which parts of your program run
+correctly?: N/A
+
+
+
+
+
+
+
+Additional comments to the grader:
+
+
+
+
+
+
+
