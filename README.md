@@ -1,9 +1,9 @@
-#CS/COE 1501 Project 2
+# CS/COE 1501 Project 2
 
-##Goal:
+## Goal:
 To understand the innerworkings and implementation of the LZW compression algorithm, and to gain a better understanding of the performance it offers.
 
-##High-level description:
+## High-level description:
 As we discussed in lecture, LZW is a compression algorithm that was created in 1984 by Abraham Lempel, Jacob Ziv, and Terry Welch.
 In its most basic form, it will output a compressed file as a series of fixed-length codewords.
 This is the approach implemented in the LZW code provided by the authors of the textbook.
@@ -14,7 +14,7 @@ The LZW code provided by the textbook authors simply continues to used patterns 
 For this project, you will be modifying the LZW source code provided by the authors of the text book to use variable-width codewords, and to optionally reset the codebook under certain conditions.
 With these changes in hand, you will then compare the performance of your modified LZW code with the provided LZW code, and further with the performance of a widely used compression application of your choice.
 
-##Specifications:
+## Specifications:
 1. First download copies of the 14 example files from http://people.cs.pitt.edu/~nlf4/cs1501/handouts/example_files/ and place them in the example_files folder of your repository.
 	* Do not add these files to your git repository, however! (i.e., do not run "git add ..." for any of these files).
 1. Make a copy of LZW.java named "MyLZW.java".  You will be modifying this file for your assignment. Note that LZW.java is the example LZW code provided by the textbook.
@@ -48,7 +48,7 @@ With these changes in hand, you will then compare the performance of your modifi
 	* Another existing compression application of your choice (e.g., 7zip, WinZIP, gzip, bzip2)
 You should organize your results of these compressions/expansions into a table in a text file named "results.txt" and submit it along with your code.
 
-##Submission Guidelines:
+## Submission Guidelines:
 * **DO NOT SUBMIT** any IDE package files.
 * You must name the primary driver for your program MyLZW.java.
 * You must be able to compile your game by running "javac MyLZW.java".
@@ -56,7 +56,7 @@ You should organize your results of these compressions/expansions into a table i
 * You must fill out info_sheet.txt.
 * Be sure to remember to push the latest copy of your code back to your GitHub repository before the the assignment is due. At the deadline, the repositories will automatically be copied for grading. Whatever is present in your GitHub repository at that time will be considered your submission for this assignment.
 
-##Additional Notes/Hints:
+## Additional Notes/Hints:
 * In the author's code the bits per codeword (W) and number of codewords (L) values are constants. However, in your version you will need them to be variables. Clearly, as the bits per codeword value increases, so does the number of codewords value.
 * The TST the author uses can grow dynamically, so it does not matter how large the dictionary will be. However, for the expand() method an array of String is used for the dictionary. Make sure this is large enough to accommodate the maximum possible number of codewords.
 * Carefully trace what your code is doing as you modify it. You only have to write a few lines of code for this program, but it could still require a substantial amount of time to get to work properly. Clearly the trickiest parts occur when the bits per codeword values are increased and when the dictionary is reset. I recommend tracing these portions of code, either on paper or with output statements to make sure your compression and expansion sections are treating them correctly. One idea is the have an extra output file for each of the compress() and expand() methods to output any trace code. Printing out (codeword, string) pairs in the iterations just before and after a bit change or reset is done can help you a lot to synchronize your code properly.
@@ -65,7 +65,7 @@ You should organize your results of these compressions/expansions into a table i
 * Note that LZW.java (and consequently your MyLZW.java) rely on redirecting standard in and standard out to the input and output files (respectively). An overview of I/O redirection can be found here:  http://www.tldp.org/LDP/abs/html/io-redirection.html, and here:  http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/redirection.mspx?mfr=true. Note that a consequence of this is that any text printed to standard out (i.e., via System.out.println()) will be redirected to the output file instead of the terminal. Standard error, however, should still be displayed to the terminal, and hence, you can use System.err.println() to output debugging information. This I/O redirection may also complicate running MyLZW from some IDEs. If you are having trouble running MyLZW from your IDE, please try to run your program from the command line.
 * Consider the notes in LZW.java (and TST.java) concerning the speed of the substring() function. In order to run your experiments faster, you may want to edit LZW.java (MyLZW.java) and TST.java to remove all calls to substring(). There is no penalty for continuing to use substring() for this assignment, but you will experience noticeably slow performance.
 
-##Grading Rubric:
+## Grading Rubric:
 * Command line arguments are interpreted as specified:  10
 * Variable width keywords (9-16 bits) working properly:  25
 * Reset mode implemented and working properly:  20
